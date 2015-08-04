@@ -87,7 +87,7 @@ hr {
   .navbar-nav {
     > li > a {
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 14px;
       padding-left: 25px;
       padding-right: 20px;
@@ -97,14 +97,8 @@ hr {
       margin-left: 6px;
       margin-bottom: 2px;
     }
-
-    a {
-      background: none !important;
-      color: darken(@gray, 10%);
-
-      &:hover {
-        color: lighten(@brand-primary, 20%);
-      }
-    }
   }
+
+  .navbar-toggle { background: @gray-light; }
+  .icon-bar { background: @brand-primary; }
 }
