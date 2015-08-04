@@ -4,15 +4,9 @@
 /*** Layout ***/
 html,
 body {
-  height: 100%;
-  font-family: @font-family-serif;
-  font-weight: 400;
-  font-size: 15px;
 }
 
 body {
-  background: @brand-neutral;
-
   @media @phone {
     font-size: 10px;
   }
@@ -20,202 +14,97 @@ body {
   @media @tablet {
     font-size: 12px;
   }
-
-  @media @desktop {
-    font-size: 15px;
-  }
 }
 
 p {
-  line-height: 1.2;
+  line-height: 1.5;
 }
-
 
 hr {
   display: block;
   width: 100%;
-  border-color: @white;
+  border-color: @gray-light;
 }
 
-/*** Type ***/
+/*** Top Bar ***/
+@top-bar-height: 35px;
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: @font-family-sans-serif;
+.top-bar {
+  height: @top-bar-height;
+  line-height: @top-bar-height;
+  background-color: #FBFBFB;
+  border-bottom: 1px solid #E9E9E9;
 }
 
-/*** Sidebar ***/
-
-@sidebar-gradient: {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ce9b86+0,b57365+19,9c4b46+37,7b3032+59,49161c+81,1f070b+100 */
-  background: #1f070b; /* Old browsers */
-  background: -moz-linear-gradient(35deg,  #ce9b86 0%, #b57365 19%, #9c4b46 37%, #7b3032 59%, #49161c 81%, #1f070b 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ce9b86), color-stop(19%,#b57365), color-stop(37%,#9c4b46), color-stop(59%,#7b3032), color-stop(81%,#49161c), color-stop(100%,#1f070b)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(35deg,  #ce9b86 0%,#b57365 19%,#9c4b46 37%,#7b3032 59%,#49161c 81%,#1f070b 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(35deg,  #ce9b86 0%,#b57365 19%,#9c4b46 37%,#7b3032 59%,#49161c 81%,#1f070b 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(35deg,  #ce9b86 0%,#b57365 19%,#9c4b46 37%,#7b3032 59%,#49161c 81%,#1f070b 100%); /* IE10+ */
-  background: linear-gradient(35deg,  #ce9b86 0%,#b57365 19%,#9c4b46 37%,#7b3032 59%,#49161c 81%,#1f070b 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce9b86', endColorstr='#1f070b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-};
-
-// From: http://www.gradient-animator.com/
-@sidebar-animated: {
-  background: linear-gradient(222deg, #0036ff, #ff0000, #ff00fc);
-  background-size: 600% 600%;
-
-  -webkit-animation: sidebarAnimated 10s ease infinite;
-  -moz-animation: sidebarAnimated 10s ease infinite;
-  animation: sidebarAnimated 10s ease infinite;
-};
-
-@-webkit-keyframes sidebarAnimated {
-    0%{background-position:90% 0%}
-    50%{background-position:11% 100%}
-    100%{background-position:90% 0%}
-}
-@-moz-keyframes sidebarAnimated {
-    0%{background-position:90% 0%}
-    50%{background-position:11% 100%}
-    100%{background-position:90% 0%}
-}
-@keyframes sidebarAnimated {
-    0%{background-position:90% 0%}
-    50%{background-position:11% 100%}
-    100%{background-position:90% 0%}
-}
-
-.main-sidebar {
-  @sidebar-gradient();
-  position: relative;
+.top-bar-block {
   float: left;
-  height: 100%;
-  width: 30%;
-  color: @white;
+  margin-right: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  color: @gray;
 
-  &:after {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    content: ' ';
-    @sidebar-animated();
-    opacity: 0.1;
+  span, i {
+    float: left;
+    padding-right: 8px;
+    line-height: @top-bar-height;
   }
+}
 
+.top-bar-social {
   a {
-    color: @white;
+    .transition(background .1s ease-in-out);
+    display: inline-block;
+    float: right;
+    width: 35px;
+    line-height: @top-bar-height;
+    font-size: 18px;
+    text-align: center;
+    color: @gray;
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: @brand-light;
+    &:hover {
+      text-decoration: none;
+      color: @white;
     }
   }
 }
 
-.sidebar-content {
-  float: right;
-  margin-right: 50px;
-  max-width: 220px;
+.social-facebook:hover { background: @facebook; }
+.social-twitter:hover { background: @twitter; }
+.social-email:hover { background: @brand-tertiary; }
+
+.top-bar .fa {
+  &.fa-mobile { font-size: 22px; }
+  &.fa-envelope-o, .fa-envelope { font-size: 17px; }
 }
 
-.xenia-tay {
-  margin-top: 1.5em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 2.5em;
+/*** Homepage ***/
+.extempra-nav {
+  .navbar-brand {
+    line-height: @navbar-height;
+    padding: 0 15px;
+  }
 
-  .dropcaps {
-    font-size: 1.2em;
+  .navbar-nav {
+    > li > a {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      padding-left: 25px;
+      padding-right: 20px;
+    }
 
-    &:first-child {
-      padding-right: 1px;
+    .caret {
+      margin-left: 6px;
+      margin-bottom: 2px;
+    }
+
+    a {
+      background: none !important;
+      color: darken(@gray, 10%);
+
+      &:hover {
+        color: lighten(@brand-primary, 20%);
+      }
     }
   }
-}
-
-.about-title {
-  margin-top: 80px;
-}
-
-.about-details-wrapper,
-.about-links {
-  margin-top: 60px;
-}
-
-/*** Content ***/
-.main-container {
-  height: 100%;
-}
-
-.content-wrapper {
-  float: left;
-  padding: 40px;
-  height: 100%;
-  width: 70%;
-  overflow-y: scroll;
-  box-sizing: border-box;
-}
-
-.portfolio-item {
-  width: 500px;
-
-  &.hvz {
-    width: 620px;
-  }
-}
-
-.item-title,
-.item-desc,
-.item-date {
-  margin: 0;
-  line-height: 1.5;
-}
-
-.item-title {
-  font-weight: bold;
-}
-
-.item-img {
-  padding: 10px 0;
-  width: 100%;
-
-  &.border {
-    border: 1px solid lighten(@gray-light, 25%);
-    padding: 15px;
-
-    // .item-img.border must be wrapped in a
-    // container div for these to work
-    &:first-child { margin-top: 10px; }
-    &:last-child { margin-bottom: 10px; }
-    &:not(:last-child) { border-bottom: none; }
-  }
-}
-
-.col {
-  float: left;
-}
-
-.hardedge .col {
-  &:last-child { padding-left: 17px; }
-
-  .item-img {
-    height: 205px;
-    width: auto;
-  }
-}
-
-.equal-split-col {
-  width: 50%;
-  &.col-1 { padding-right: 2.5%; }
-  &.col-2 { padding-left: 2.5%; }
-}
-
-.wanderable .col,
-.delaunay .col {
-  .equal-split-col();
-}
-
-.wanderable .col .item-desc {
-  text-align: center;
-  font-style: italic;
 }
