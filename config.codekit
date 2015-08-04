@@ -2079,13 +2079,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/extempra_classes_thumb.jpg": {
+	"\/img\/classes_thumb.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 3343,
-		"inputAbbreviatedPath": "\/img\/extempra_classes_thumb.jpg",
-		"outputAbbreviatedPath": "\/img\/extempra_classes_thumb.jpg",
+		"inputAbbreviatedPath": "\/img\/classes_thumb.jpg",
+		"outputAbbreviatedPath": "\/img\/classes_thumb.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/coaching_thumb.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9565,
+		"inputAbbreviatedPath": "\/img\/coaching_thumb.jpg",
+		"outputAbbreviatedPath": "\/img\/coaching_thumb.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2094,9 +2105,31 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 92640,
+		"initialSize": 83192,
 		"inputAbbreviatedPath": "\/img\/homepage_hero_1.jpg",
 		"outputAbbreviatedPath": "\/img\/homepage_hero_1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/homepage_hero_1_old.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 92640,
+		"inputAbbreviatedPath": "\/img\/homepage_hero_1_old.jpg",
+		"outputAbbreviatedPath": "\/img\/homepage_hero_1_old.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/homepage_hero_1_old2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 92640,
+		"inputAbbreviatedPath": "\/img\/homepage_hero_1_old2.jpg",
+		"outputAbbreviatedPath": "\/img\/homepage_hero_1_old2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2123,13 +2156,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/personal_coaching_thumb.jpg": {
+	"\/img\/logo.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 9565,
-		"inputAbbreviatedPath": "\/img\/personal_coaching_thumb.jpg",
-		"outputAbbreviatedPath": "\/img\/personal_coaching_thumb.jpg",
+		"initialSize": 4815,
+		"inputAbbreviatedPath": "\/img\/logo.jpg",
+		"outputAbbreviatedPath": "\/img\/logo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3377,
+		"inputAbbreviatedPath": "\/img\/logo.png",
+		"outputAbbreviatedPath": "\/img\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
