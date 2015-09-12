@@ -6212,3 +6212,44 @@ h3 + h4 {
 #mc_embed_signup .mc-field-group {
   padding-bottom: 0 !important;
 }
+.connect-with-us {
+  background: #dfdfdf;
+}
+.connect-with-us .connect-with-us-heading {
+  line-height: 38px;
+}
+.connect-with-us .social-btns {
+  line-height: 70px;
+  font-size: 32px;
+}
+.connect-with-us .social-btns a {
+  float: left;
+  display: inline-block;
+  padding: 0 15px;
+  color: white;
+}
+.connect-with-us .social-btns a:hover {
+  text-decoration: none;
+}
+.connect-with-us .social-btns span.call-us {
+  float: right;
+  margin-left: -5px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.connect-with-us .social-btns .social-phone {
+  background: #1a96a8;
+  font-size: 40px;
+}
+.connect-with-us .social-btns .social-phone i {
+  margin-left: -10px;
+}
+.connect-with-us .social-btns .social-twitter {
+  background: #02a9ef;
+}
+.connect-with-us .social-btns .social-facebook {
+  background: #37538e;
+}
+.connect-with-us .social-btns .social-email {
+  background: #1a7ba8;
+}

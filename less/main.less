@@ -433,3 +433,44 @@ h3 + h4 {
     padding-bottom: 0 !important;
   }
 }
+
+.connect-with-us {
+  background: #dfdfdf;
+
+  .connect-with-us-heading {
+    line-height: 38px;
+  }
+
+  .social-btns {
+    line-height: 70px;
+    font-size: 32px;
+
+    a {
+      float: left;
+      display: inline-block;
+      padding: 0 15px;
+      color: white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    span.call-us {
+      float: right;
+      margin-left: -5px;
+      margin-right: 5px;
+      font-size: 14px;
+    }
+
+    .social-phone {
+      background: @callus;
+      font-size: 40px;
+      i { margin-left: -10px; }
+    }
+
+    .social-twitter { background: @twitter; }
+    .social-facebook { background: @facebook; }
+    .social-email { background: @mailto; }
+  }
+}
