@@ -51,7 +51,7 @@ h3 {
   letter-spacing: 1px;
 }
 
-h3.lined {
+h3.h3-lined {
   position: relative;
   text-align: center;
 
@@ -366,5 +366,70 @@ h3 + h4 {
 
   &.right {
     right: 0;
+  }
+}
+
+.contact-us {
+  background: url(/img/contact_bg.jpg) left top no-repeat;
+  background-size: cover;
+}
+
+/*** Mailchimp ***/
+#mc_embed_signup {
+  max-width: 750px;
+  margin: 0 auto;
+
+  // Checkboxes
+  div.mc-field-group.input-group {
+    width: auto;
+    margin: 0 auto;
+
+    ul {
+     .list-unstyled;
+     font-size: 20px;
+     line-height: 2.5;
+    }
+
+    label {
+      font-weight: normal;
+    }
+
+    input {
+      width: 22px;
+      height: 16px;
+    }
+  }
+
+  // Email input
+  div.mc-field-group {
+    input#mce-EMAIL {
+      float: left;
+      display: inline;
+      height: 60px;
+      width: 79%;
+      font-size: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input#mc-embedded-subscribe {
+      display: inline;
+      height: 60px;
+      width: 20%;
+      border-radius: 0;
+      font-size: 20px;
+      font-weight: normal;
+      background: #460138;
+    }
+  }
+
+  .mc-field-group + .mc-field-group {
+    padding-top: 3%;
+  }
+
+  .mc-field-group {
+    padding-bottom: 0 !important;
   }
 }
