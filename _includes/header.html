@@ -1,3 +1,13 @@
+  {% comment %}Jekyll can now sort on custom page key
+  {% assign pages = site.pages | sort: 'category-order' %}
+  {% for p in pages %}
+    {% if p.menu == 'main' %}
+      <li{% if p.url == page.url %} class="active"{% endif %}>
+         <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  {% endcomment %}
 <nav class="navbar navbar-default extempra-nav">
   <div class="container">
     <div class="navbar-header">
@@ -14,24 +24,24 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Offerings<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="#">Workshops</a></li>
-            <li><a href="#">Personal Coaching</a></li>
-            <li><a href="#">Extempra Classes</a></li>
+            <li><a href="/workshops">Workshops</a></li>
+            <li><a href="/personalcoaching">Personal Coaching</a></li>
+            <li><a href="/extempraclasses">Extempra Classes</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             About Us<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="#">Testimonials</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
           </ul>
         </li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </div>
   </div>

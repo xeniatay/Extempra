@@ -1,8 +1,30 @@
-<footer class="footer">
+<footer class="footer section-content">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <a class="logo" href="{{ site.url }}" title="{{ site.title }}"><img alt="Extempra Logo" src="/img/logo.png"></a>
+      <div class="col-xs-6">
+        <a class="logo" href="{{ site.url }}" title="{{ site.title }}"><img alt="Extempra Logo" src="/img/logo-gray.png"></a>
+      </div>
+      <div class="col-xs-6">
+        {% assign pages = site.pages | where: 'footer', true | sort: 'sitemap-order' %}
+        {% for p in pages %}
+          {% assign loopindex = forloop.index | modulo: 4 %}
+
+          {% if loopindex == 1 %}
+          <div class="col">
+          {% endif %}
+
+            <a class="footer-link" href="{{ page.permalink }}">
+              {% if p.sitemap-title %}
+                {{ p.sitemap-title }}
+              {% else %}
+                {{ p.title }}
+              {% endif %}
+            </a>
+
+          {% if loopindex == 0 %}
+          </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>

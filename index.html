@@ -1,20 +1,150 @@
 ---
 layout: default
+title: Extempra | Interactive Communications Training
+sitemap-title: Home
+sitemap-order: 1
+footer: true
 ---
 
-<div class="home">
+<section class="section-hero interactive-training">
+  <div class="container hero-wrapper">
+    <div class="row hero-content">
+      <div class="col-xs-12">
+        <h1>Interactive Communications Training</h1>
+        <h2>Speak with authenticity, confidence and eloquence</h2>
+        <button class="btn btn-primary btn-lg btn-cta btn-animated-light">Find Out More</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h1>Posts</h1>
+<section class="section-content our-offerings">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="h3-lined">Our Offerings</h3>
+        <h4 class="text-center">Join us for interactive and custom-tailored training</h4>
+      </div>
+    </div>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="tile tile-workshops">
+          <span class="tile-content">Workshops</span>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="tile tile-coaching">
+          <span class="tile-content">Personal <br>Coaching</span>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="tile tile-classes">
+          <span class="tile-content">Extempra <br>Classes</span>
+        </div>
+      </div>
+    </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 sub-offerings">
+        <table class="table">
+          <tr>
+            <th>Professional Speaking</th>
+            <th>Public Speaking</th>
+          </tr><tr>
+            <td>Presenting with Credibility</td>
+            <td>Impromptu Speaking</td>
+          </tr><tr>
+            <td>Networking</td>
+            <td>Speech Delivery</td>
+          </tr><tr>
+            <td>Accent Training</td>
+            <td>Speech Crafting</td>
+          </tr>
+        </table>
+        <a href="#" class="subofferings-view-all">View All ></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-</div>
+<section class="section-hero find-confidence">
+  <div class="container hero-wrapper">
+    <div class="row hero-content">
+      <div class="col-sm-12">
+        <h1>Find Confidence</h1>
+        <h2>See immediate changes in the way you speak</h2>
+        <button class="btn btn-primary btn-cta btn-animated-light">Get Free Consultation</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-content our-clients">
+  <div class="container">
+    <div class="row">
+      <h3 class="col-sm-12 h3-lined">Our Clients</h3>
+      <div class="col-xs-12 col-sm-6 testimonial">
+        <span class="left quotemark">&ldquo;</span>
+        <p class="content">The workshop focused on developing oral communication skills and received extremely high ratings from students. Marco and Christina are full of energy and take a very interactive approach in keeping the students engaged throughout the workshop.</p>
+
+        <div class="profile">
+          <img class="pic">
+          <p class="name">Victoria Bambrick</p>
+          <p class="position">Experiential Learning and Career Development Coach</p>
+          <p class="company">School of Accounting and Finance, University of Waterloo</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 testimonial">
+        <p class="content">[The facilitator] was able to improve my presentation, speaking and media skills ten fold after only a week of training. He is quick on his feet and able to adjust and customize his services based what his clients need in the moment in order to be successful.</p>
+        <span class="right quotemark">&rdquo;</span>
+
+        <div class="profile">
+          <img class="pic">
+          <p class="name">Rachel Bartholomew</p>
+          <p class="position">Managing Partner</p>
+          <p class="company">Cybernorth Ventures Inc</p>
+        </div>
+      </div>
+      <a href="#" class="more-testimonials pull-right">More Testimonials ></a>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 client-logos">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-content contact-us">
+  <div class="container">
+    <div class="row">
+      <h3 class="col-xs-12 h3-lined text-center">Contact Us</h3>
+      {% include mailchimp.html %}
+    </div>
+  </div>
+</section>
+
+<section class="connect-with-us">
+  <div class="container">
+    <div class="row">
+      <h3 class="connect-with-us-heading col-xs-5">Connect with us</h3>
+      <div class="social-btns col-sm-7">
+        <div class="pull-right">
+          <a href="tel:226-339-1001" title="phone" class="social-phone">
+            <i class="fa fa-mobile fa-fw"></i>
+            <span class="call-us">Call us at 226.339.1001</span>
+          </a>
+          <a href="mailto:info@extempra.com" title="mail" target="_blank" class="social-email">
+            <i class="fa fa-envelope fa-fw"></i>
+          </a>
+          <a href="https://facebook.com/extempra" target="_blank" class="social-facebook " data-original-title="facebook">
+            <i class="fa fa-facebook fa-fw"></i>
+          </a>
+          <a href="https://twitter.com/extempra" target="_blank" class="social-twitter " data-original-title="twitter">
+            <i class="fa fa-twitter fa-fw"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

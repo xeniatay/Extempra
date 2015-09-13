@@ -474,3 +474,37 @@ h3 + h4 {
     .social-email { background: @mailto; }
   }
 }
+
+.footer {
+  background: @footer-bg;
+
+  .logo img {
+    width: 140px;
+  }
+
+  .col {
+    float: left;
+    width: 50%;
+  }
+
+  .footer-link {
+    display: block;
+    color: lighten(@gray, 10%);
+    font-size: 14px;
+
+    &:hover {
+      color: @gray-light;
+      text-decoration: none;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      height: 1px;
+      width: 90%;
+      margin: .4em 0 .6em 0;
+      background: @gray;
+      opacity: 0.2;
+    }
+  }
+}

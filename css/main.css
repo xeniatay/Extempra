@@ -6253,3 +6253,31 @@ h3 + h4 {
 .connect-with-us .social-btns .social-email {
   background: #1a7ba8;
 }
+.footer {
+  background: #383838;
+}
+.footer .logo img {
+  width: 140px;
+}
+.footer .col {
+  float: left;
+  width: 50%;
+}
+.footer .footer-link {
+  display: block;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+.footer .footer-link:hover {
+  color: #efefef;
+  text-decoration: none;
+}
+.footer .footer-link:after {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 90%;
+  margin: .4em 0 .6em 0;
+  background: #969696;
+  opacity: 0.2;
+}
