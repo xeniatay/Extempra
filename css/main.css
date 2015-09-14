@@ -6132,7 +6132,27 @@ h3 + h4 {
 }
 .section-content .sub-offerings .subofferings-view-all {
   float: right;
+  position: relative;
   font-size: 14px;
+}
+.section-content .sub-offerings .subofferings-view-all:hover {
+  text-decoration: underline;
+}
+.section-content .sub-offerings .subofferings-view-all:focus {
+  text-decoration: none;
+}
+.section-content .sub-offerings .subofferings-view-all:focus:hover {
+  text-decoration: underline;
+}
+.section-content .sub-offerings .subofferings-view-all:after {
+  position: absolute;
+  top: 4px;
+  right: -14px;
+  content: '\25BC';
+  font-size: 10px;
+}
+.section-content .sub-offerings .subofferings-view-all.expanded:after {
+  content: '\25B2';
 }
 .testimonial {
   padding: 40px 50px;
@@ -6146,6 +6166,16 @@ h3 + h4 {
 }
 .testimonial .profile .name {
   font-weight: 500;
+}
+.more-testimonials {
+  position: relative;
+}
+.more-testimonials:after {
+  position: absolute;
+  top: 5px;
+  right: -16px;
+  content: '\25B6';
+  font-size: 9px;
 }
 .quotemark {
   position: absolute;
@@ -6193,11 +6223,15 @@ h3 + h4 {
   height: 60px;
   width: 79%;
   font-size: 20px;
+  opacity: 0.9;
 }
 #mc_embed_signup div.mc-field-group input#mce-EMAIL:focus {
   outline: none;
+  opacity: 1;
 }
 #mc_embed_signup div.mc-field-group input#mc-embedded-subscribe {
+  -webkit-transition: opacity linear 0.1s;
+  transition: opacity linear 0.1s;
   display: inline;
   height: 60px;
   width: 20%;
@@ -6205,6 +6239,10 @@ h3 + h4 {
   font-size: 20px;
   font-weight: normal;
   background: #460138;
+  opacity: 0.9;
+}
+#mc_embed_signup div.mc-field-group input#mc-embedded-subscribe:hover {
+  opacity: 1;
 }
 #mc_embed_signup .mc-field-group + .mc-field-group {
   padding-top: 3%;
@@ -6223,13 +6261,17 @@ h3 + h4 {
   font-size: 32px;
 }
 .connect-with-us .social-btns a {
+  -webkit-transition: opacity linear 0.1s;
+  transition: opacity linear 0.1s;
   float: left;
   display: inline-block;
   padding: 0 15px;
   color: white;
+  opacity: 0.9;
 }
 .connect-with-us .social-btns a:hover {
   text-decoration: none;
+  opacity: 1;
 }
 .connect-with-us .social-btns span.call-us {
   float: right;

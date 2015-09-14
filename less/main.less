@@ -336,7 +336,27 @@ h3 + h4 {
 
   .subofferings-view-all {
     float: right;
+    position: relative;
     font-size: 14px;
+
+    &:hover { text-decoration: underline; }
+
+    &:focus {
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+
+    &:after {
+      position: absolute;
+      top: 4px;
+      right: -14px;
+      content: '\25BC'; // down arrow
+      font-size: 10px;
+    }
+
+    &.expanded:after {
+      content: '\25B2'; // up arrow
+    }
   }
 }
 
@@ -349,6 +369,18 @@ h3 + h4 {
 
     p { margin: 5px 0; }
     .name { font-weight: 500; }
+  }
+}
+
+.more-testimonials {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 5px;
+    right: -16px;
+    content: '\25B6'; // right arrow
+    font-size: 9px;
   }
 }
 
@@ -408,13 +440,17 @@ h3 + h4 {
       height: 60px;
       width: 79%;
       font-size: 20px;
+      opacity: 0.9;
 
       &:focus {
         outline: none;
+        opacity: 1;
       }
     }
 
+    // Submit button
     input#mc-embedded-subscribe {
+      .transition(opacity linear .1s);
       display: inline;
       height: 60px;
       width: 20%;
@@ -422,6 +458,9 @@ h3 + h4 {
       font-size: 20px;
       font-weight: normal;
       background: #460138;
+      opacity: 0.9;
+
+      &:hover { opacity: 1; }
     }
   }
 
@@ -446,13 +485,16 @@ h3 + h4 {
     font-size: 32px;
 
     a {
+      .transition(opacity linear .1s);
       float: left;
       display: inline-block;
       padding: 0 15px;
       color: white;
+      opacity: 0.9;
 
       &:hover {
         text-decoration: none;
+        opacity: 1;
       }
     }
 
