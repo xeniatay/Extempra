@@ -5815,6 +5815,16 @@ hr {
   width: 100%;
   border-color: #efefef;
 }
+@media (max-width: 479px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+@media (max-width: 479px) {
+  .show-mobile {
+    display: block;
+  }
+}
 /*** Type ***/
 h1 {
   text-transform: uppercase;
@@ -5865,6 +5875,16 @@ h3 + h4 {
   padding-right: 10px;
   font-size: 12px;
   color: #969696;
+}
+@media (max-width: 479px) {
+  .top-bar-block {
+    font-size: 10px;
+  }
+}
+@media (max-width: 319px) {
+  .top-bar-block {
+    font-size: 9px;
+  }
 }
 .top-bar-block span,
 .top-bar-block i {

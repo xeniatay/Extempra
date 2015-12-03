@@ -31,6 +31,9 @@ hr {
   border-color: @gray-light;
 }
 
+.hide-mobile { @media @phone { display: none; } }
+.show-mobile { @media @phone { display: block; } }
+
 /*** Type ***/
 h1 {
   text-transform: uppercase;
@@ -91,6 +94,9 @@ h3 + h4 {
   padding-right: 10px;
   font-size: 12px;
   color: @gray;
+
+  @media @phone { font-size: 10px; }
+  @media @phone-v { font-size: 9px; }
 
   span, i {
     float: left;
@@ -517,6 +523,7 @@ h3 + h4 {
   }
 }
 
+/*** Footer ***/
 .footer {
   background: @footer-bg;
 
@@ -550,3 +557,10 @@ h3 + h4 {
     }
   }
 }
+
+/*** Pages ***/
+.page-header {
+  background: @brand-primary;
+}
+
+/*** Workshop ***/
