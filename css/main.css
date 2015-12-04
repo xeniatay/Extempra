@@ -6666,7 +6666,6 @@ a.social-btn:hover {
 .testimonials-page .testimonial .profile .pic {
   float: right;
   margin-right: 2%;
-  -webkit-filter: sepia(0.8);
 }
 .testimonials-page .testimonial .profile .profile-content {
   width: auto;
