@@ -6127,6 +6127,85 @@ a.social-btn:hover {
 .social-email {
   background: #1a7ba8;
 }
+/*** Testimonials ***/
+.testimonial .content {
+  padding: 40px 50px 20px;
+}
+@media (max-width: 767px) {
+  .testimonial .content {
+    padding: 20px 30px;
+  }
+}
+.testimonial .profile {
+  float: right;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .testimonial .profile {
+    font-size: 13px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .testimonial .profile {
+    font-size: 12px;
+  }
+}
+@media (max-width: 479px) {
+  .testimonial .profile {
+    font-size: 11px;
+  }
+}
+.testimonial .profile p {
+  margin: 5px 0;
+}
+.testimonial .profile .name {
+  font-weight: 500;
+}
+.testimonial .profile .pic {
+  display: block;
+  width: 18%;
+  max-width: 85px;
+  border-radius: 100px;
+}
+.testimonial .profile .profile-content {
+  width: 78%;
+}
+.testimonial .profile.left .pic,
+.testimonial .profile.left .profile-content {
+  float: left;
+}
+.testimonial .profile.left .pic {
+  margin-right: 4%;
+}
+.testimonial .profile.right .pic,
+.testimonial .profile.right .profile-content {
+  float: right;
+  text-align: right;
+}
+.testimonial .profile.right .pic {
+  margin-left: 4%;
+}
+.quotemark {
+  position: absolute;
+  font-family: Impact;
+  font-size: 360px;
+  color: #edffdd;
+  line-height: 200px;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .quotemark {
+    font-size: 250px;
+  }
+}
+.quotemark.left {
+  left: 0;
+}
+.quotemark.right {
+  right: 0;
+}
 /*** Homepage ***/
 .section-hero {
   color: #ffffff;
@@ -6301,93 +6380,22 @@ a.social-btn:hover {
 .section-content .sub-offerings .subofferings-view-all.expanded:after {
   content: '\25B2';
 }
-.testimonial .content {
-  padding: 40px 50px 20px;
-}
-@media (max-width: 767px) {
-  .testimonial .content {
-    padding: 20px 30px;
-  }
-}
-.testimonial .profile {
-  float: right;
-  margin-bottom: 30px;
-  width: 100%;
-  font-size: 14px;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .testimonial .profile {
-    font-size: 13px;
-  }
-}
+/*** Our Clients / Testimonials ***/
 @media (min-width: 480px) and (max-width: 767px) {
-  .testimonial .profile {
-    font-size: 12px;
-  }
-}
-@media (max-width: 479px) {
-  .testimonial .profile {
-    font-size: 11px;
-  }
-}
-.testimonial .profile p {
-  margin: 5px 0;
-}
-.testimonial .profile .name {
-  font-weight: 500;
-}
-.testimonial .profile .pic {
-  display: block;
-  width: 18%;
-  border-radius: 100px;
-}
-@media (min-width: 480px) and (max-width: 767px) {
-  .testimonial .profile .pic {
+  .our-clients .testimonial.col-sm-6 .pic {
     width: 10%;
   }
 }
-.testimonial .profile .profile-content {
-  width: 78%;
-}
-.testimonial .profile.left .pic,
-.testimonial .profile.left .profile-content {
-  float: left;
-}
-.testimonial .profile.left .pic {
-  margin-right: 4%;
-}
-.testimonial .profile.right .pic,
-.testimonial .profile.right .profile-content {
-  float: right;
-  text-align: right;
-}
-.testimonial .profile.right .pic {
-  margin-left: 4%;
-}
-.more-testimonials {
+.our-clients .more-testimonials {
   position: relative;
   width: 150px;
 }
-.more-testimonials:after {
+.our-clients .more-testimonials:after {
   position: absolute;
   top: 5px;
   right: 0px;
   content: '\25B6';
   font-size: 9px;
-}
-.quotemark {
-  position: absolute;
-  font-family: Impact;
-  font-size: 360px;
-  color: #edffdd;
-  line-height: 200px;
-  z-index: -1;
-}
-.quotemark.left {
-  left: 0;
-}
-.quotemark.right {
-  right: 0;
 }
 .contact-us {
   background: url(/img/contact_bg.jpg) left top no-repeat;
@@ -6643,5 +6651,34 @@ a.social-btn:hover {
 @media (max-width: 767px) {
   .contact-us-social .social-btn:not(.square) {
     padding: 0 8px;
+  }
+}
+/*** Testimonials Page ***/
+.testimonials-page .testimonial .profile {
+  margin-right: 60px;
+}
+@media (max-width: 767px) {
+  .testimonials-page .testimonial .profile {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+}
+.testimonials-page .testimonial .profile .pic {
+  float: right;
+  margin-right: 2%;
+  -webkit-filter: sepia(0.8);
+}
+.testimonials-page .testimonial .profile .profile-content {
+  width: auto;
+  float: right;
+}
+@media (max-width: 767px) {
+  .testimonials-page .testimonial .profile .profile-content {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials-page > .row {
+    margin-right: 0;
   }
 }
