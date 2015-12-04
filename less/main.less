@@ -84,6 +84,11 @@ h3 + h4 {
   margin-top: 25px;
 }
 
+/*** Background ***/
+.bg-gray {
+  background: @gray-lightest;
+}
+
 /*** Top Bar ***/
 @top-bar-height: 35px;
 
@@ -184,6 +189,7 @@ h3 + h4 {
   border: none;
 
   @media @lt-desktop { font-size: 18px; }
+  @media @phone-h { font-size: 16px; }
   @media @phone-v {
     padding: 11px 20px;
     font-size: 14px;
@@ -201,6 +207,13 @@ h3 + h4 {
     z-index: -1;
   }
 }
+
+.btn-email {
+  text-transform: lowercase !important;
+  font-weight: normal !important;
+}
+
+.btn-pink { background: @brand-pink !important; }
 
 /* Button animated */
 .btn-animated {
@@ -239,6 +252,49 @@ h3 + h4 {
   .btn-animated;
   &:after { background: @white; }
 }
+
+/*** Social Buttons ***/
+
+.social-btns-mixin(@size: 70px, @font-size: 32px) {
+  line-height: @size;
+  font-size: @font-size;
+  text-align: center;
+
+  @media @lt-desktop {
+    font-size: @font-size * .8;
+    line-height: @size * .7;
+  }
+
+  @media @phone-v { font-size: @font-size * .62; }
+
+  .social-btn.square {
+    width: @size;
+
+    @media @lt-desktop { width: @size * .7; }
+  }
+
+  .social-btn:not(.square) {
+    padding: 0 15px;
+
+    @media @lt-desktop { padding: 0 8px; }
+  }
+}
+
+a.social-btn {
+  .transition(opacity linear .1s);
+  display: inline-block;
+  color: white;
+  opacity: 0.9;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.social-twitter { background: @twitter; }
+.social-facebook { background: @facebook; }
+.social-email { background: @mailto; }
 
 /*** Homepage ***/
 .section-hero {
@@ -467,7 +523,7 @@ h3 + h4 {
   &:after {
     position: absolute;
     top: 5px;
-    right: 16px;
+    right: 0px;
     content: '\25B6'; // right arrow
     font-size: 9px;
   }
@@ -579,32 +635,7 @@ h3 + h4 {
   }
 
   .social-btns {
-    line-height: 70px;
-    font-size: 32px;
-
-    @media @lt-desktop {
-      font-size: 25px;
-      line-height: 50px;
-      padding: 0;
-    }
-    @media @phone-v { font-size: 20px; }
-
-    a {
-      .transition(opacity linear .1s);
-      float: left;
-      display: inline-block;
-      padding: 0 15px;
-      color: white;
-      opacity: 0.9;
-
-      @media @lt-desktop { padding: 0 8px; }
-
-      &:hover {
-        text-decoration: none;
-        opacity: 1;
-      }
-    }
-
+    .social-btns-mixin(70px, 32px);
     span.call-us {
       float: right;
       margin-left: -5px;
@@ -614,15 +645,16 @@ h3 + h4 {
       @media @lt-desktop { font-size: 12px; }
     }
 
+    .social-btn {
+      float: left;
+    }
+
     .social-phone {
       background: @callus;
       font-size: 40px;
+
       i { margin-left: -10px; }
     }
-
-    .social-twitter { background: @twitter; }
-    .social-facebook { background: @facebook; }
-    .social-email { background: @mailto; }
   }
 }
 
@@ -663,7 +695,56 @@ h3 + h4 {
 
 /*** Pages ***/
 .page-header {
+  margin: 0; // override bootstrap
+  padding: 5px 0 15px 0;
   background: @brand-primary;
+  color: @white;
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
 }
 
 /*** Workshop ***/
+
+/*** Contact Us ***/
+.contact-us-page {
+  text-align: center;
+
+  .content {
+    padding: 20px 0 40px;
+    line-height: 2em;
+
+    @media @lt-desktop {
+      padding: 15px 20px;
+    }
+  }
+
+  .note {
+    font-style: italic;
+    font-size: 0.9em;
+    padding-top: 10px;
+  }
+
+  .split-section {
+    margin: 20px 0;
+
+    @media @lt-desktop {
+      margin: 10px 0 0;
+
+      &:last-child { margin-bottom: 10px; }
+    }
+  }
+
+  a.social-phone {
+    display: block;
+    margin-top: 1.2em;
+    color: @text-color;
+  }
+}
+
+.contact-us-social {
+  .social-btns-mixin(40px, 25px);
+}

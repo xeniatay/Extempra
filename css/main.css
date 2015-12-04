@@ -5889,6 +5889,10 @@ h4 {
 h3 + h4 {
   margin-top: 25px;
 }
+/*** Background ***/
+.bg-gray {
+  background: #f8f8f8;
+}
 /*** Top Bar ***/
 .top-bar {
   height: 35px;
@@ -6001,6 +6005,11 @@ h3 + h4 {
     font-size: 18px;
   }
 }
+@media (min-width: 320px) and (max-width: 479px) {
+  .btn-cta {
+    font-size: 16px;
+  }
+}
 @media (max-width: 319px) {
   .btn-cta {
     padding: 11px 20px;
@@ -6013,6 +6022,13 @@ h3 + h4 {
   content: '';
   position: absolute;
   z-index: -1;
+}
+.btn-email {
+  text-transform: lowercase !important;
+  font-weight: normal !important;
+}
+.btn-pink {
+  background: #cc3366 !important;
 }
 /* Button animated */
 .btn-animated {
@@ -6089,6 +6105,27 @@ h3 + h4 {
 }
 .btn-animated-light:after {
   background: #ffffff;
+}
+/*** Social Buttons ***/
+a.social-btn {
+  -webkit-transition: opacity linear 0.1s;
+  transition: opacity linear 0.1s;
+  display: inline-block;
+  color: white;
+  opacity: 0.9;
+}
+a.social-btn:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+.social-twitter {
+  background: #02a9ef;
+}
+.social-facebook {
+  background: #37538e;
+}
+.social-email {
+  background: #1a7ba8;
 }
 /*** Homepage ***/
 .section-hero {
@@ -6334,7 +6371,7 @@ h3 + h4 {
 .more-testimonials:after {
   position: absolute;
   top: 5px;
-  right: 16px;
+  right: 0px;
   content: '\25B6';
   font-size: 9px;
 }
@@ -6450,36 +6487,34 @@ h3 + h4 {
 .connect-with-us .social-btns {
   line-height: 70px;
   font-size: 32px;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .connect-with-us .social-btns {
-    font-size: 25px;
-    line-height: 50px;
-    padding: 0;
+    font-size: 25.6px;
+    line-height: 49px;
   }
 }
 @media (max-width: 319px) {
   .connect-with-us .social-btns {
-    font-size: 20px;
+    font-size: 19.84px;
   }
 }
-.connect-with-us .social-btns a {
-  -webkit-transition: opacity linear 0.1s;
-  transition: opacity linear 0.1s;
-  float: left;
-  display: inline-block;
-  padding: 0 15px;
-  color: white;
-  opacity: 0.9;
+.connect-with-us .social-btns .social-btn.square {
+  width: 70px;
 }
 @media (max-width: 767px) {
-  .connect-with-us .social-btns a {
-    padding: 0 8px;
+  .connect-with-us .social-btns .social-btn.square {
+    width: 49px;
   }
 }
-.connect-with-us .social-btns a:hover {
-  text-decoration: none;
-  opacity: 1;
+.connect-with-us .social-btns .social-btn:not(.square) {
+  padding: 0 15px;
+}
+@media (max-width: 767px) {
+  .connect-with-us .social-btns .social-btn:not(.square) {
+    padding: 0 8px;
+  }
 }
 .connect-with-us .social-btns span.call-us {
   float: right;
@@ -6492,21 +6527,15 @@ h3 + h4 {
     font-size: 12px;
   }
 }
+.connect-with-us .social-btns .social-btn {
+  float: left;
+}
 .connect-with-us .social-btns .social-phone {
   background: #1a96a8;
   font-size: 40px;
 }
 .connect-with-us .social-btns .social-phone i {
   margin-left: -10px;
-}
-.connect-with-us .social-btns .social-twitter {
-  background: #02a9ef;
-}
-.connect-with-us .social-btns .social-facebook {
-  background: #37538e;
-}
-.connect-with-us .social-btns .social-email {
-  background: #1a7ba8;
 }
 /*** Footer ***/
 .footer {
@@ -6539,6 +6568,80 @@ h3 + h4 {
 }
 /*** Pages ***/
 .page-header {
+  margin: 0;
+  padding: 5px 0 15px 0;
   background: #279fbb;
+  color: #ffffff;
+}
+.page-header h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 /*** Workshop ***/
+/*** Contact Us ***/
+.contact-us-page {
+  text-align: center;
+}
+.contact-us-page .content {
+  padding: 20px 0 40px;
+  line-height: 2em;
+}
+@media (max-width: 767px) {
+  .contact-us-page .content {
+    padding: 15px 20px;
+  }
+}
+.contact-us-page .note {
+  font-style: italic;
+  font-size: 0.9em;
+  padding-top: 10px;
+}
+.contact-us-page .split-section {
+  margin: 20px 0;
+}
+@media (max-width: 767px) {
+  .contact-us-page .split-section {
+    margin: 10px 0 0;
+  }
+  .contact-us-page .split-section:last-child {
+    margin-bottom: 10px;
+  }
+}
+.contact-us-page a.social-phone {
+  display: block;
+  margin-top: 1.2em;
+  color: #2f2f2f;
+}
+.contact-us-social {
+  line-height: 40px;
+  font-size: 25px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .contact-us-social {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 319px) {
+  .contact-us-social {
+    font-size: 15.5px;
+  }
+}
+.contact-us-social .social-btn.square {
+  width: 40px;
+}
+@media (max-width: 767px) {
+  .contact-us-social .social-btn.square {
+    width: 28px;
+  }
+}
+.contact-us-social .social-btn:not(.square) {
+  padding: 0 15px;
+}
+@media (max-width: 767px) {
+  .contact-us-social .social-btn:not(.square) {
+    padding: 0 8px;
+  }
+}
