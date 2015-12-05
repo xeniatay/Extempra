@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
-        <a class="logo" href="{{ site.url }}{{ site.baseurl }}" title="{{ site.title }}"><img alt="Extempra Logo" src="{{ site.url }}{{ site.baseurl }}/img/logo-gray.png"></a>
+        <a class="logo" href="{% if site.baseurl == "" %}/{% else %}{{ site.baseurl }}{% endif %}" title="{{ site.title }}"><img alt="Extempra Logo" src="{{ site.baseurl }}/img/logo-gray.png"></a>
       </div>
       <div class="col-xs-6">
         {% assign pages = site.pages | where: 'footer', true | sort: 'sitemap-order' %}
@@ -13,7 +13,7 @@
           <div class="half-col">
           {% endif %}
 
-            <a class="footer-link" href="{{ site.url }}{{ site.baseurl }}{{ p.permalink }}">
+            <a class="footer-link" href="{{ site.baseurl }}{{ p.permalink }}">
               {% if p.sitemap-title %}
                 {{ p.sitemap-title }}
               {% else %}
