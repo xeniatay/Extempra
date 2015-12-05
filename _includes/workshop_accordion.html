@@ -1,5 +1,7 @@
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         {% for workshop in page.workshops %}
+
+        <!-- Start of single workshop accordion -->
         <div class="panel panel-default">
           <!-- data-parent="#accordion" attribute was removed to allow multiple expansions -->
           <a class="panel-button collapsed" role="button" data-toggle="collapse" href="#{{ workshop.id }}" aria-expanded="false" aria-controls="{{ workshop.id }}">
@@ -31,5 +33,7 @@
             </div>
           </div>
         </div>
+        <!-- End of single workshop accordion -->
+
         {% endfor %}
       </div>

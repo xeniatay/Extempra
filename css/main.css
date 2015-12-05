@@ -5855,6 +5855,7 @@ h3 {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
+  line-height: 1.4;
 }
 @media (max-width: 479px) {
   h3 {
@@ -6232,6 +6233,9 @@ a.social-btn:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.section-hero.dark {
+  color: #2f2f2f;
 }
 .section-hero .hero-wrapper {
   display: table;
@@ -6812,4 +6816,34 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
 }
 .workshop-details strong {
   font-weight: 500;
+}
+/*** Personal Coaching ***/
+.achieve-your-goals-bg {
+  height: 364px;
+  width: 40%;
+  margin-left: -1px;
+  margin-top: -1px;
+  background: url(/img/coaching-team.jpg) right center no-repeat;
+  background-size: auto 100%;
+}
+@media (max-width: 767px) {
+  .achieve-your-goals-bg {
+    padding: 15%;
+    width: 100%;
+    height: 0;
+    background-size: cover;
+    background-position: right 20%;
+  }
+}
+.achieve-your-goals-text {
+  height: 364px !important;
+  width: 47%;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .achieve-your-goals-text {
+    height: auto !important;
+    width: 90%;
+    padding: 20px 5%;
+  }
 }
