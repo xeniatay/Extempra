@@ -21,6 +21,34 @@ hr {
   border-color: @gray-light;
 }
 
+.half-col {
+  float: left;
+  width: 50%;
+
+  @media @lt-desktop {
+    width: 100%;
+  }
+}
+
+.half-col-content {
+  width: 80%;
+  box-sizing: border-box;
+
+  @media @lt-desktop {
+    width: 100%;
+    padding: 0 10% !important;
+  }
+
+  &.left {
+    float: right;
+    padding-right: 15%;
+  }
+
+  &.right {
+    padding-left: 15%;
+  }
+}
+
 .hide-mobile { @media @phone { display: none; } }
 .show-mobile { @media @phone { display: block; } }
 
@@ -41,9 +69,12 @@ h2 {
   font-weight: 500;
   line-height: 1.2;
 
+  @media @lt-desktop { line-height: 1.4; }
   @media @tablet { font-size: 20px; }
   @media @phone { font-size: 15px; }
 }
+
+h2 + h2 { margin-top: 0; }
 
 h3 {
   font-size: 20px;
@@ -87,6 +118,10 @@ p + p {
   padding-top: 10px;
 
   @media @lt-desktop { padding-top: 5px; }
+}
+
+h3 + p {
+  margin-top: 20px;
 }
 
 li {
@@ -229,6 +264,7 @@ li {
 }
 
 .btn-pink { background: @brand-pink !important; }
+.btn-green { background: @brand-green !important; }
 
 /* Button animated */
 .btn-animated {
@@ -370,7 +406,7 @@ a.social-btn {
   position: absolute;
   font-family: Impact;
   font-size: 360px;
-  color: @brand-green;
+  color: @brand-lightgreen;
   line-height: 200px;
   z-index: -1;
 
@@ -698,11 +734,6 @@ a.social-btn {
     width: 140px;
   }
 
-  .col {
-    float: left;
-    width: 50%;
-  }
-
   .footer-link {
     display: block;
     color: lighten(@gray, 10%);
@@ -894,7 +925,7 @@ a.panel-button.collapsed {
 /*** Personal Coaching ***/
 
 .achieve-your-goals-bg {
-  height: 364px;
+  height: 365px;
   width: 40%;
   margin-left: -1px;
   margin-top: -1px;
@@ -919,5 +950,19 @@ a.panel-button.collapsed {
     height: auto !important;
     width: 90%;
     padding: 20px 5%;
+  }
+}
+
+.section-hero.urgent-coaching {
+  height: 315px;
+  background-image: url(/img/personal-coaching-hero.jpg);
+
+  @media @lt-desktop { height: 300px; }
+
+  .btn-cta {
+    margin-top: 30px;
+    background: @brand-tertiary;
+
+    @media @lt-desktop { margin-top: 10px; }
   }
 }

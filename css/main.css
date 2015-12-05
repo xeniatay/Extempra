@@ -5807,6 +5807,32 @@ hr {
   width: 100%;
   border-color: #efefef;
 }
+.half-col {
+  float: left;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .half-col {
+    width: 100%;
+  }
+}
+.half-col-content {
+  width: 80%;
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .half-col-content {
+    width: 100%;
+    padding: 0 10% !important;
+  }
+}
+.half-col-content.left {
+  float: right;
+  padding-right: 15%;
+}
+.half-col-content.right {
+  padding-left: 15%;
+}
 @media (max-width: 479px) {
   .hide-mobile {
     display: none;
@@ -5840,6 +5866,11 @@ h2 {
   font-weight: 500;
   line-height: 1.2;
 }
+@media (max-width: 767px) {
+  h2 {
+    line-height: 1.4;
+  }
+}
 @media (min-width: 480px) and (max-width: 767px) {
   h2 {
     font-size: 20px;
@@ -5849,6 +5880,9 @@ h2 {
   h2 {
     font-size: 15px;
   }
+}
+h2 + h2 {
+  margin-top: 0;
 }
 h3 {
   font-size: 20px;
@@ -5897,6 +5931,9 @@ p + p {
   p + p {
     padding-top: 5px;
   }
+}
+h3 + p {
+  margin-top: 20px;
 }
 li {
   line-height: 1.8em;
@@ -6049,6 +6086,9 @@ li {
 }
 .btn-pink {
   background: #cc3366 !important;
+}
+.btn-green {
+  background: #009966 !important;
 }
 /* Button animated */
 .btn-animated {
@@ -6577,10 +6617,6 @@ a.social-btn:hover {
 .footer .logo img {
   width: 140px;
 }
-.footer .col {
-  float: left;
-  width: 50%;
-}
 .footer .footer-link {
   display: block;
   color: #b0b0b0;
@@ -6819,7 +6855,7 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
 }
 /*** Personal Coaching ***/
 .achieve-your-goals-bg {
-  height: 364px;
+  height: 365px;
   width: 40%;
   margin-left: -1px;
   margin-top: -1px;
@@ -6845,5 +6881,23 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
     height: auto !important;
     width: 90%;
     padding: 20px 5%;
+  }
+}
+.section-hero.urgent-coaching {
+  height: 315px;
+  background-image: url(/img/personal-coaching-hero.jpg);
+}
+@media (max-width: 767px) {
+  .section-hero.urgent-coaching {
+    height: 300px;
+  }
+}
+.section-hero.urgent-coaching .btn-cta {
+  margin-top: 30px;
+  background: #1a96a8;
+}
+@media (max-width: 767px) {
+  .section-hero.urgent-coaching .btn-cta {
+    margin-top: 10px;
   }
 }
