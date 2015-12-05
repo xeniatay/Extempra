@@ -6288,7 +6288,7 @@ a.social-btn:hover {
 }
 .section-hero.interactive-training {
   height: 350px;
-  background-image: url(/img/homepage_hero_1.jpg);
+  background-image: url(../img/homepage_hero_1.jpg);
 }
 @media (max-width: 767px) {
   .section-hero.interactive-training {
@@ -6306,7 +6306,7 @@ a.social-btn:hover {
 }
 .section-hero.find-confidence {
   height: 320px;
-  background-image: url(/img/homepage_hero_2.jpg);
+  background-image: url(../img/homepage_hero_2.jpg);
 }
 @media (max-width: 767px) {
   .section-hero.find-confidence {
@@ -6377,13 +6377,13 @@ a.social-btn:hover {
   }
 }
 .section-content.our-offerings .tile-workshops {
-  background-image: url(/img/workshops_thumb.jpg);
+  background-image: url(../img/workshops_thumb.jpg);
 }
 .section-content.our-offerings .tile-coaching {
-  background-image: url(/img/coaching_thumb.jpg);
+  background-image: url(../img/coaching_thumb.jpg);
 }
 .section-content.our-offerings .tile-classes {
-  background-image: url(/img/classes_thumb.jpg);
+  background-image: url(../img/classes_thumb.jpg);
 }
 .section-content .sub-offerings {
   margin-top: 30px;
@@ -6463,7 +6463,7 @@ a.social-btn:hover {
   font-size: 9px;
 }
 .contact-us {
-  background: url(/img/contact_bg.jpg) left top no-repeat;
+  background: url(../img/contact_bg.jpg) left top no-repeat;
   background-size: cover;
 }
 /*** Mailchimp ***/
@@ -6789,7 +6789,7 @@ a.social-btn:hover {
 .workshops-page .get-free-consultation {
   padding: 10px 35px 30px;
   box-sizing: border-box;
-  background-image: url(/img/workshop_consultation.jpg);
+  background-image: url(../img/workshop_consultation.jpg);
   background-size: cover;
 }
 .workshops-page .get-free-consultation .btn-cta {
@@ -6859,7 +6859,7 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
   width: 40%;
   margin-left: -1px;
   margin-top: -1px;
-  background: url(/img/coaching-team.jpg) right center no-repeat;
+  background: url(../img/coaching-team.jpg) right center no-repeat;
   background-size: auto 100%;
 }
 @media (max-width: 767px) {
@@ -6885,7 +6885,7 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
 }
 .section-hero.urgent-coaching {
   height: 315px;
-  background-image: url(/img/personal-coaching-hero.jpg);
+  background-image: url(../img/personal-coaching-hero.jpg);
 }
 @media (max-width: 767px) {
   .section-hero.urgent-coaching {

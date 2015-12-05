@@ -2,8 +2,8 @@
 title: Extempra
 email: info@extempra.com
 description: "Interactive Communications Training - Speak with authenticity, confidence and eloquence."
-baseurl: ""
-url: "http://xeniatay.com/extempra"
+baseurl: "http://xeniatay.com/extempra/_site"
+url: "http://xeniatay.com/extempra/_site"
 
 # Build settings
 markdown: kramdown
