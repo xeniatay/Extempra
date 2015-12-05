@@ -1,13 +1,7 @@
-  {% comment %}Jekyll can now sort on custom page key
-  {% assign pages = site.pages | sort: 'category-order' %}
-  {% for p in pages %}
-    {% if p.menu == 'main' %}
-      <li{% if p.url == page.url %} class="active"{% endif %}>
-         <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-  {% endcomment %}
+{% assign offerings-pages = site.pages | where: 'parent', 'offerings' | sort: 'sitemap-order' %}
+{% assign about-us-pages = site.pages | where: 'parent', 'about-us' | sort: 'sitemap-order' %}
+{% assign contact-pages = site.pages | where: 'parent', 'offerings' | sort: 'sitemap-order' %}
+
 <nav class="navbar navbar-default extempra-nav">
   <div class="container">
     <div class="navbar-header">
@@ -24,24 +18,42 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="javascript:void(0);" class="dropdown-toggle {% if p.url == page.url %}active{% endif %} {% if page.parent == 'offerings' %}active{% endif %}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Offerings<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/workshops">Workshops</a></li>
-            <li><a href="/personal-coaching">Personal Coaching</a></li>
-            <li><a href="/extempra-classes">Extempra Classes</a></li>
+            {% for p in offerings-pages %}
+            <li>
+              <a href="{{ p.permalink }}" class="{% if p.url == page.url %}active{% endif %}">
+                {% if p.sitemap-title %}
+                  {{ p.sitemap-title }}
+                {% else %}
+                  {{ p.title }}
+                {% endif %}
+              </a>
+            </li>
+            {% endfor %}
           </ul>
         </li>
         <li class="dropdown">
-          <a href="/about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="/about" class="dropdown-toggle {% if p.url == page.url %}active{% endif %} {% if page.parent == 'about-us' %}active{% endif %}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             About Us<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/testimonials">Testimonials</a></li>
+            {% for p in about-us-pages %}
+            <li>
+              <a href="{{ p.permalink }}" class="{% if p.url == page.url %}active{% endif %}">
+                {% if p.sitemap-title %}
+                  {{ p.sitemap-title }}
+                {% else %}
+                  {{ p.title }}
+                {% endif %}
+              </a>
+            </li>
+            {% endfor %}
           </ul>
         </li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/contact/" class="{% if page.url == '/contact/' %}active{% endif %} {% if page.parent == 'contact' %}active{% endif %}">Contact</a></li>
       </ul>
     </div>
   </div>

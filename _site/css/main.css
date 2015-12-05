@@ -5992,6 +5992,9 @@ li {
 .extempra-nav .dropdown-menu > li > a {
   padding: 8px 25px;
 }
+.extempra-nav .active {
+  color: #2494ae !important;
+}
 .extempra-nav .navbar-toggle {
   background: #efefef;
 }
