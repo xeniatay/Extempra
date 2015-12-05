@@ -5802,9 +5802,6 @@ body {
     font-size: 14px;
   }
 }
-p {
-  line-height: 1.5;
-}
 hr {
   display: block;
   width: 100%;
@@ -5888,6 +5885,25 @@ h4 {
 }
 h3 + h4 {
   margin-top: 25px;
+}
+p {
+  line-height: 1.8em;
+}
+p + p {
+  padding-top: 10px;
+}
+@media (max-width: 767px) {
+  p + p {
+    padding-top: 5px;
+  }
+}
+li {
+  line-height: 1.8em;
+}
+@media (max-width: 767px) {
+  li {
+    line-height: 1.5em;
+  }
 }
 /*** Background ***/
 .bg-gray {
@@ -6256,11 +6272,13 @@ a.social-btn:hover {
   color: #2f2f2f;
 }
 .section-content {
-  padding: 30px 0 45px;
+  padding-top: 30px;
+  padding-bottom: 45px;
 }
 @media (max-width: 767px) {
   .section-content {
-    padding: 20px 0 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
 }
 .section-content.our-offerings .tile {
@@ -6586,14 +6604,12 @@ a.social-btn:hover {
   font-weight: normal;
   letter-spacing: 1px;
 }
-/*** Workshop ***/
 /*** Contact Us ***/
 .contact-us-page {
   text-align: center;
 }
 .contact-us-page .content {
   padding: 20px 0 40px;
-  line-height: 2em;
 }
 @media (max-width: 767px) {
   .contact-us-page .content {
@@ -6680,4 +6696,117 @@ a.social-btn:hover {
   .testimonials-page > .row {
     margin-right: 0;
   }
+}
+/*** Workshops Page ***/
+@media (max-width: 767px) {
+  .workshops-page {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .workshops-page .panel-title {
+    float: left;
+    width: 90%;
+    font-size: 14px;
+  }
+}
+.workshops-page .panel-default {
+  border: none;
+  background: #f8f8f8;
+}
+.workshops-page .panel-heading {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  padding: 15px 20px;
+}
+@media (max-width: 767px) {
+  .workshops-page .panel-heading:before,
+  .workshops-page .panel-heading:after {
+    content: " ";
+    display: table;
+  }
+  .workshops-page .panel-heading:after {
+    clear: both;
+  }
+  .workshops-page .panel-heading:before,
+  .workshops-page .panel-heading:after {
+    content: " ";
+    display: table;
+  }
+  .workshops-page .panel-heading:after {
+    clear: both;
+  }
+}
+.workshops-page .panel-heading:hover {
+  background: #f3f3f3;
+}
+.workshops-page .panel-collapse {
+  padding: 0 10px;
+}
+.workshops-page .get-free-consultation {
+  padding: 10px 35px 30px;
+  box-sizing: border-box;
+  background-image: url(/img/workshop_consultation.jpg);
+  background-size: cover;
+}
+.workshops-page .get-free-consultation .btn-cta {
+  margin-top: 15px;
+}
+@media (max-width: 767px) {
+  .workshops-page .get-free-consultation .btn-cta {
+    margin-top: 5px;
+  }
+}
+a.panel-button {
+  color: #2f2f2f;
+}
+a.panel-button:hover {
+  color: #460138;
+}
+a.panel-button:hover,
+a.panel-button:focus,
+a.panel-button:active {
+  text-decoration: none;
+}
+/* Accordion's toggle icons */
+a.panel-button:not(.collapsed) .panel-heading {
+  background: #eeeeee;
+  color: #460138;
+}
+a.panel-button:not(.collapsed) .panel-heading .icon-collapse.fa-plus {
+  display: none;
+}
+a.panel-button:not(.collapsed) .panel-heading .icon-collapse.fa-minus {
+  display: block;
+}
+a.panel-button.collapsed .icon-collapse.fa-plus {
+  display: block;
+}
+a.panel-button.collapsed .icon-collapse.fa-minus {
+  display: none;
+}
+.icon-collapse {
+  margin-top: 5px;
+}
+.workshop-info {
+  padding-top: 30px;
+}
+@media (max-width: 767px) {
+  .workshop-info {
+    padding-top: 15px;
+  }
+}
+.workshop-details {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .workshop-details {
+    margin-top: 15px;
+  }
+}
+.workshop-details ul {
+  padding-left: 1.5em;
+}
+.workshop-details strong {
+  font-weight: 500;
 }

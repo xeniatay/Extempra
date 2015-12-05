@@ -1,0 +1,35 @@
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        {% for workshop in page.workshops %}
+        <div class="panel panel-default">
+          <!-- data-parent="#accordion" attribute was removed to allow multiple expansions -->
+          <a class="panel-button collapsed" role="button" data-toggle="collapse" href="#{{ workshop.id }}" aria-expanded="false" aria-controls="{{ workshop.id }}">
+            <div class="panel-heading" role="tab" id="heading-{{ workshop.id }}">
+              <span class="panel-title">
+                {{ workshop.title }}
+              </span>
+              <i class="icon-collapse fa fa-plus fa-fw pull-right"></i>
+              <i class="icon-collapse fa fa-minus fa-fw pull-right"></i>
+            </div>
+          </a>
+          <div id="{{ workshop.id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{ workshop.id }}">
+            <div class="panel-body">
+              {{ workshop.desc }}
+              <div class="row workshop-details">
+                {% if workshop.topic-areas %}
+                <div class="topic-areas col-xs-6">
+                  <p><u><strong>Topic Areas:</strong></u></p>
+                  <ul>{{ workshop.topic-areas }}</ul>
+                </div>
+                {% endif %}
+                {% if workshop.recommended-details %}
+                <div class="recommended-details col-xs-6">
+                  <p><u><strong>What We Recommend:</strong></u></p>
+                  <ul>{{ workshop.recommended-details }}</ul>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>

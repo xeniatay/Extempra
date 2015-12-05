@@ -15,10 +15,6 @@ body {
   @media @lt-desktop { font-size: 14px; }
 }
 
-p {
-  line-height: 1.5;
-}
-
 hr {
   display: block;
   width: 100%;
@@ -82,6 +78,20 @@ h4 {
 
 h3 + h4 {
   margin-top: 25px;
+}
+
+p { line-height: 1.8em; }
+
+p + p {
+  padding-top: 10px;
+
+  @media @lt-desktop { padding-top: 5px; }
+}
+
+li {
+  line-height: 1.8em;
+
+  @media @lt-desktop { line-height: 1.5em; }
 }
 
 /*** Background ***/
@@ -420,10 +430,12 @@ a.social-btn {
 }
 
 .section-content {
-  padding: 30px 0 45px;
+  padding-top: 30px;
+  padding-bottom: 45px;
 
   @media @lt-desktop {
-    padding: 20px 0 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
 }
 
@@ -720,15 +732,12 @@ a.social-btn {
   }
 }
 
-/*** Workshop ***/
-
 /*** Contact Us ***/
 .contact-us-page {
   text-align: center;
 
   .content {
     padding: 20px 0 40px;
-    line-height: 2em;
 
     @media @lt-desktop {
       padding: 15px 20px;
@@ -790,4 +799,87 @@ a.social-btn {
   @media @lt-desktop {
     &>.row { margin-right: 0; }
   }
+}
+
+/*** Workshops Page ***/
+.workshops-page {
+  @media @lt-desktop { font-size: 14px; }
+
+  .panel-title {
+    @media @lt-desktop {
+      float: left;
+      width: 90%;
+      font-size: 14px;
+    }
+  }
+
+  .panel-default {
+    border: none;
+    background: @gray-lightest;
+  }
+
+  .panel-heading {
+    .transition(.1s);
+    padding: 15px 20px;
+
+    @media @lt-desktop { .clearfix; }
+
+    &:hover { background: darken(@gray-lightest, 2%); }
+  }
+
+  .panel-collapse {
+    padding: 0 10px;
+  }
+
+  .get-free-consultation {
+    padding: 10px 35px 30px;
+    box-sizing: border-box;
+    background-image: url(/img/workshop_consultation.jpg);
+    background-size: cover;
+
+    .btn-cta {
+      margin-top: 15px;
+
+      @media @lt-desktop { margin-top: 5px; }
+    }
+  }
+}
+
+a.panel-button {
+  color: @text-color;
+
+  &:hover { color: @brand-secondary; }
+  &:hover, &:focus, &:active { text-decoration: none; }
+}
+
+/* Accordion's toggle icons */
+a.panel-button:not(.collapsed) .panel-heading {
+  background: @gray-lighter;
+  color: @brand-secondary;
+
+  .icon-collapse.fa-plus { display: none; }
+  .icon-collapse.fa-minus { display: block; }
+}
+
+a.panel-button.collapsed {
+  .icon-collapse.fa-plus { display: block; }
+  .icon-collapse.fa-minus { display: none; }
+}
+
+.icon-collapse { margin-top: 5px; }
+
+.workshop-info {
+  padding-top: 30px;
+
+  @media @lt-desktop { padding-top: 15px; }
+}
+
+.workshop-details {
+  margin-top: 20px;
+
+  @media @lt-desktop { margin-top: 15px; }
+
+  ul { padding-left: 1.5em; }
+
+  strong { font-weight: 500; }
 }
