@@ -24,7 +24,7 @@
           <ul class="dropdown-menu">
             {% for p in offerings-pages %}
             <li>
-              <a href="{{ p.permalink }}" class="{% if p.url == page.url %}active{% endif %}">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ p.permalink }}" class="{% if p.url == page.url %}active{% endif %}">
                 {% if p.sitemap-title %}
                   {{ p.sitemap-title }}
                 {% else %}
@@ -36,13 +36,13 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="/about" class="dropdown-toggle {% if p.url == page.url %}active{% endif %} {% if page.parent == 'about-us' %}active{% endif %}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="{{ site.url }}{{ site.baseurl }}/about" class="dropdown-toggle {% if p.url == page.url %}active{% endif %} {% if page.parent == 'about-us' %}active{% endif %}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             About Us<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             {% for p in about-us-pages %}
             <li>
-              <a href="{{ p.permalink }}" class="{% if p.url == page.url %}active{% endif %}">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ p.permalink }}" class="{% if p.url == page.url %}active{% endif %}">
                 {% if p.sitemap-title %}
                   {{ p.sitemap-title }}
                 {% else %}
@@ -53,7 +53,7 @@
             {% endfor %}
           </ul>
         </li>
-        <li><a href="/contact/" class="{% if page.url == '/contact/' %}active{% endif %} {% if page.parent == 'contact' %}active{% endif %}">Contact</a></li>
+        <li><a href="{{ site.url }}{{ site.baseurl }}/contact/" class="{% if page.url == '/contact/' %}active{% endif %} {% if page.parent == 'contact' %}active{% endif %}">Contact</a></li>
       </ul>
     </div>
   </div>
