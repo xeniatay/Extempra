@@ -580,12 +580,13 @@ a.social-btn {
     font-size: 14px;
     color: @brand-primary;
 
-    &:hover { text-decoration: underline; }
+    &:hover { color: @black; }
 
-    &:focus {
-      text-decoration: none;
+    &:focus,
+    &:active {
+      color: @brand-primary;
 
-      &:hover { text-decoration: underline; }
+      &:hover { color: @black; }
     }
 
     &:after {
@@ -962,16 +963,48 @@ a.panel-button.collapsed {
   }
 }
 
-.section-hero.urgent-coaching {
-  height: 315px;
-  background-image: url(../img/personal-coaching-hero.jpg);
+.section-hero.free-consultation {
+  height: 400px;
+  text-align: left;
+  background-image: url(../img/personal-coaching-hero-2.jpg);
 
-  @media @lt-desktop { height: 300px; }
+  @media @desktop-lg { height: 315px; }
+  @media @lt-desktop { height: 380px; }
+
+  .urgent-coaching-content {
+    padding: 20px 30px 25px;
+    width: 100%;
+    background: darken(@brand-secondary, 5%);
+    text-align: left;
+    opacity: 0.8;
+
+    @media @desktop-lg { width: 40%; }
+    @media @lt-desktop-lg {
+      padding: 10px 20px;
+      margin-top: 25px;
+
+      h2 { font-size: 20px; }
+    }
+
+    h2 { line-height: 1.4; }
+  }
+
+  .urgent-heading {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .free-consultation-content {
+    margin-top: -15px;
+
+    @media @lt-desktop-lg {
+      margin-top: 0;
+    }
+  }
 
   .btn-cta {
     margin-top: 30px;
-    background: @brand-tertiary;
 
-    @media @lt-desktop { margin-top: 10px; }
+    @media @lt-desktop-lg { margin-top: 15px; }
   }
 }

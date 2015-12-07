@@ -6435,13 +6435,15 @@ a.social-btn:hover {
   color: #279fbb;
 }
 .section-content .sub-offerings .subofferings-view-all:hover {
-  text-decoration: underline;
+  color: #2f2f2f;
 }
-.section-content .sub-offerings .subofferings-view-all:focus {
-  text-decoration: none;
+.section-content .sub-offerings .subofferings-view-all:focus,
+.section-content .sub-offerings .subofferings-view-all:active {
+  color: #279fbb;
 }
-.section-content .sub-offerings .subofferings-view-all:focus:hover {
-  text-decoration: underline;
+.section-content .sub-offerings .subofferings-view-all:focus:hover,
+.section-content .sub-offerings .subofferings-view-all:active:hover {
+  color: #2f2f2f;
 }
 .section-content .sub-offerings .subofferings-view-all:after {
   position: absolute;
@@ -6891,21 +6893,62 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
     padding: 20px 5%;
   }
 }
-.section-hero.urgent-coaching {
-  height: 315px;
-  background-image: url(../img/personal-coaching-hero.jpg);
+.section-hero.free-consultation {
+  height: 400px;
+  text-align: left;
+  background-image: url(../img/personal-coaching-hero-2.jpg);
 }
-@media (max-width: 767px) {
-  .section-hero.urgent-coaching {
-    height: 300px;
+@media (min-width: 992px) {
+  .section-hero.free-consultation {
+    height: 315px;
   }
 }
-.section-hero.urgent-coaching .btn-cta {
-  margin-top: 30px;
-  background: #1a96a8;
-}
 @media (max-width: 767px) {
-  .section-hero.urgent-coaching .btn-cta {
-    margin-top: 10px;
+  .section-hero.free-consultation {
+    height: 380px;
+  }
+}
+.section-hero.free-consultation .urgent-coaching-content {
+  padding: 20px 30px 25px;
+  width: 100%;
+  background: #2d0124;
+  text-align: left;
+  opacity: 0.8;
+}
+@media (min-width: 992px) {
+  .section-hero.free-consultation .urgent-coaching-content {
+    width: 40%;
+  }
+}
+@media (max-width: 1199px) {
+  .section-hero.free-consultation .urgent-coaching-content {
+    padding: 10px 20px;
+    margin-top: 25px;
+  }
+  .section-hero.free-consultation .urgent-coaching-content h2 {
+    font-size: 20px;
+  }
+}
+.section-hero.free-consultation .urgent-coaching-content h2 {
+  line-height: 1.4;
+}
+.section-hero.free-consultation .urgent-heading {
+  display: block;
+  margin-bottom: 15px;
+}
+.section-hero.free-consultation .free-consultation-content {
+  margin-top: -15px;
+}
+@media (max-width: 1199px) {
+  .section-hero.free-consultation .free-consultation-content {
+    margin-top: 0;
+  }
+}
+.section-hero.free-consultation .btn-cta {
+  margin-top: 30px;
+}
+@media (max-width: 1199px) {
+  .section-hero.free-consultation .btn-cta {
+    margin-top: 15px;
   }
 }
