@@ -171,35 +171,54 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row text-center">
       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 sub-offerings">
-        <table class="table">
-          <tr>
-            <th>Professional Speaking</th>
-            <th>Public Speaking</th>
-          </tr><tr>
-            <td>Presenting with Credibility</td>
-            <td>Impromptu Speaking</td>
-          </tr><tr>
-            <td>Networking</td>
-            <td>Speech Delivery</td>
-          </tr><tr>
-            <td>Accent Training</td>
-            <td>Speech Crafting</td>
-          </tr><tr class="sub-offerings-hidden hide">
-            <td>Accent Training</td>
-            <td>Speech Crafting</td>
-          </tr><tr class="sub-offerings-hidden hide">
-            <td>Accent Training</td>
-            <td>Speech Crafting</td>
-          </tr><tr class="sub-offerings-hidden hide">
-            <td>Accent Training</td>
-            <td>Speech Crafting</td>
-          </tr>
-        </table>
-        <a href="javascript:void(0);" id="view-all-offerings" class="subofferings-view-all">View All</a>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2 sub-offerings-col">
+            <span class="col-heading">Professional Speaking</span>
+            <ul class="list-unstyled">
+              <li>Presenting with Credibility</li>
+              <li>Networking</li>
+              <li>Accent Training</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 sub-offerings-col">
+            <span class="col-heading">Public Speaking</span>
+            <ul class="list-unstyled">
+              <li>Impromptu Speaking</li>
+              <li>Speech Delivery</li>
+              <li>Speech Crafting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="panel panel-default">
+            <div id="panelId" data-parent="#accordion" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-panelId">
+              <div class="panel-body">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2 sub-offerings-col">
+                  <ul class="list-unstyled">
+                    <li>Presenting with Credibility</li>
+                    <li>Networking</li>
+                    <li>Accent Training</li>
+                  </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 sub-offerings-col">
+                  <ul class="list-unstyled">
+                    <li>Impromptu Speaking</li>
+                    <li>Speech Delivery</li>
+                    <li>Speech Crafting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
+      <a class="panel-button collapsed subofferings-view-all" role="button" data-toggle="collapse" href="#panelId" aria-expanded="false" aria-controls="panelId">
+        View All
+      </a>
     </div>
+
+
   </div>
 </section>
 

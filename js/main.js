@@ -10,7 +10,6 @@ $(document).ready(function() {
   });
 
   bindNavbar();
-  expandOfferings();
 });
 
 function bindNavbar() {
@@ -24,14 +23,4 @@ function bindNavbar() {
   else {
     $('.extempra-nav .dropdown').off('mouseover').off('mouseout');
   }
-}
-
-function expandOfferings() {
-  $('#view-all-offerings').click(function() {
-    $(this).toggleClass('expanded');
-    $('.sub-offerings-hidden')
-      .hide()
-      .toggleClass('hide')
-      .fadeIn();
-  });
 }

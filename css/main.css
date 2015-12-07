@@ -6395,36 +6395,44 @@ a.social-btn:hover {
     padding: 20px 0 20px;
   }
 }
-.section-content .sub-offerings .table {
-  width: 80%;
-  margin: 0 auto 10px;
+.section-content .sub-offerings .sub-offerings-col {
   font-size: 16px;
 }
 @media (max-width: 767px) {
-  .section-content .sub-offerings .table {
+  .section-content .sub-offerings .sub-offerings-col {
     font-size: 14px;
   }
 }
-.section-content .sub-offerings .table tr:nth-child(2) td {
-  padding-top: 15px;
-}
-.section-content .sub-offerings .table td {
-  text-align: center;
-  border: none;
-}
-.section-content .sub-offerings .table th {
+.section-content .sub-offerings .sub-offerings-col .col-heading {
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
   background: #eeeeee;
   border: none;
   border-left: 3px solid #ffffff;
   font-weight: 500;
   text-align: center;
-  padding: 12px 20px;
+}
+.section-content .sub-offerings .sub-offerings-col ul {
+  margin-bottom: 0;
+}
+.section-content .sub-offerings .sub-offerings-col ul > li {
+  line-height: 2;
+}
+.section-content .sub-offerings .panel-default {
+  border: 0;
+  box-shadow: none;
+}
+.section-content .sub-offerings .panel-body {
+  padding: 0;
 }
 .section-content .sub-offerings .subofferings-view-all {
   float: right;
   position: relative;
-  font-size: 14px;
   width: 80px;
+  font-size: 14px;
+  color: #279fbb;
 }
 .section-content .sub-offerings .subofferings-view-all:hover {
   text-decoration: underline;
@@ -6438,11 +6446,11 @@ a.social-btn:hover {
 .section-content .sub-offerings .subofferings-view-all:after {
   position: absolute;
   top: 4px;
-  right: 14px;
+  right: 0px;
   content: '\25BC';
   font-size: 10px;
 }
-.section-content .sub-offerings .subofferings-view-all.expanded:after {
+.section-content .sub-offerings .subofferings-view-all[aria-expanded="true"]:after {
   content: '\25B2';
 }
 /*** Our Clients / Testimonials ***/
