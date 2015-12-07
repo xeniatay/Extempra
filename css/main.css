@@ -5935,6 +5935,11 @@ p + p {
 h3 + p {
   margin-top: 20px;
 }
+small p {
+  padding-top: 5px;
+  line-height: 1.3em;
+  margin-bottom: 2px;
+}
 li {
   line-height: 1.8em;
 }
@@ -6920,7 +6925,7 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
     width: 40%;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .section-hero.free-consultation .urgent-coaching-content {
     padding: 10px 20px;
     margin-top: 25px;
@@ -6939,7 +6944,7 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
 .section-hero.free-consultation .free-consultation-content {
   margin-top: -15px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .section-hero.free-consultation .free-consultation-content {
     margin-top: 0;
   }
@@ -6947,8 +6952,75 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
 .section-hero.free-consultation .btn-cta {
   margin-top: 30px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .section-hero.free-consultation .btn-cta {
     margin-top: 15px;
+  }
+}
+/*** Team Page ***/
+.dynamic-duo {
+  background-color: #fbfbfb;
+}
+.dynamic-duo-bg {
+  height: 457px;
+  width: 33%;
+  margin-left: -1px;
+  margin-top: -1px;
+  background: url(../img/teampage-duo2.jpg) right center no-repeat;
+  background-size: auto 100%;
+}
+@media (min-width: 992px) {
+  .dynamic-duo-bg {
+    height: 510px;
+  }
+}
+@media (max-width: 991px) {
+  .dynamic-duo-bg {
+    padding: 15%;
+    width: 100%;
+    height: 0;
+    background-size: cover;
+    background-position: right 10%;
+  }
+}
+.dynamic-duo-text {
+  padding-left: 20px;
+  height: 457px !important;
+  width: 65%;
+  max-width: 800px;
+}
+@media (max-width: 991px) {
+  .dynamic-duo-text {
+    height: auto !important;
+    width: 100%;
+    max-width: none;
+    padding: 20px 5%;
+  }
+}
+@media (max-width: 767px) {
+  .dynamic-duo-text .pic-section {
+    margin: 10px auto;
+  }
+}
+.dynamic-duo-text .headshot {
+  width: 90px;
+}
+.dynamic-duo-text hr {
+  height: 1px;
+  background: #a3a3a3;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.extempras-pillars .col-pillar h3 {
+  color: #279fbb;
+}
+.extempras-pillars .col-pillar p {
+  font-size: 18px;
+  line-height: 1.3em;
+}
+@media (max-width: 767px) {
+  .extempras-pillars .col-pillar p {
+    font-size: 14px;
   }
 }
