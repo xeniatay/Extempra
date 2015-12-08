@@ -5935,7 +5935,8 @@ p + p {
     padding-top: 5px;
   }
 }
-h3 + p {
+h3 + p,
+h2 + p {
   margin-top: 20px;
 }
 small p {
@@ -7122,6 +7123,14 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
   }
 }
 /*** Extempra Classes ***/
+.extempra-classes-page .scroll-anchor-offset > a {
+  color: #2f2f2f;
+}
+.extempra-classes-page .scroll-anchor-offset > a:hover,
+.extempra-classes-page .scroll-anchor-offset > a:active,
+.extempra-classes-page .scroll-anchor-offset > a:focus {
+  text-decoration: none !important;
+}
 .extempra-classes-page .extempraclasses-sidebar {
   font-size: 15px;
 }
@@ -7143,6 +7152,11 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
 .ec-public-speaking table {
   table-layout: fixed;
 }
+@media (max-width: 767px) {
+  .ec-public-speaking table {
+    table-layout: auto;
+  }
+}
 .ec-public-speaking tr .session-num {
   width: 80px;
 }
@@ -7160,16 +7174,32 @@ a.panel-button.collapsed .icon-collapse.fa-minus {
   text-align: center;
   margin: 40px auto 10px;
 }
+@media (max-width: 767px) {
+  .notify-me {
+    margin-top: 20px;
+  }
+}
 .scroll-anchor-offset {
   padding-top: 50px;
   margin-top: -50px;
 }
 .extempra-classes-well {
-  margin: 40px auto;
-  padding: 20px 40px 30px;
+  padding: 10px 40px 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .extempra-classes-well {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }
 .ec-create-your-own .btn-contact {
   display: block;
   margin: 40px auto;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .ec-create-your-own .btn-contact {
+    margin: 20px auto;
+  }
 }
