@@ -50,7 +50,18 @@ hr {
 }
 
 .hide-mobile { @media @phone { display: none; } }
-.show-mobile { @media @phone { display: block; } }
+.show-mobile {
+  display: none;
+
+  @media @phone { display: block; }
+}
+
+.hide-lt-desktop { @media @lt-desktop { display: none; } }
+.show-lt-desktop {
+  display: none;
+
+  @media @lt-desktop { display: block; }
+}
 
 /*** Type ***/
 h1 {
@@ -196,11 +207,23 @@ li {
 }
 
 /*** Navbar ***/
+@fixed-navbar-height: @navbar-height - 30px;
+@navbar-mobile-height: 68px;
+
 .extempra-nav {
+  .transition(all .2s ease-in-out);
   margin-bottom: 0;
+  padding: 14px 0;
+  z-index: 2;
+
+  @media @lt-desktop {
+    padding: 8px 0;
+    min-height: @navbar-mobile-height;
+  }
 
   .navbar-brand {
-    line-height: @navbar-height;
+    line-height: @fixed-navbar-height;
+    height: @fixed-navbar-height;
     padding: 0 15px;
   }
 
@@ -209,8 +232,7 @@ li {
       text-transform: uppercase;
       font-weight: 500;
       font-size: 14px;
-      padding-left: 25px;
-      padding-right: 20px;
+      padding: 15px 20px 15px 25px;
     }
 
     .caret {
@@ -228,11 +250,39 @@ li {
   }
 
   .navbar-toggle {
+    margin-top: 8px;
+    margin-bottom: 0px;
     background: @gray-light;
     @media @tablet { margin-right: 0; }
   }
 
   .icon-bar { background: @brand-primary; }
+}
+
+.extempra-nav.navbar-fixed-top {
+  min-height: auto;
+  padding: 0;
+  opacity: 0.95;
+
+  .navbar-brand {
+    width: 130px;
+
+    img { width: 100%; }
+  }
+
+  .navbar-nav {
+    padding-right: 15px;
+  }
+
+  .navbar-toggle {
+    @media @tablet { margin-right: 30px; }
+  }
+}
+
+.navbar-wrapper {
+  height: @navbar-height;
+
+  @media @lt-desktop { height: @navbar-mobile-height; }
 }
 
 /*** Buttons ***/
@@ -461,7 +511,7 @@ a.social-btn {
     margin-top: 45px;
     background: @brand-tertiary;
 
-    @media @lt-desktop { margin-top: 30px; }
+    @media @lt-desktop { margin-top: 20px; }
   }
 }
 
@@ -469,12 +519,17 @@ a.social-btn {
   height: 320px;
   background-image: url(../img/homepage_hero_2.jpg);
 
-  @media @lt-desktop { height: 260px; }
+  @media @lt-desktop { height: 220px; }
 
   .btn-cta {
     margin-top: 35px;
     background: @brand-yellow;
     color: @black;
+
+    @media @lt-desktop {
+      margin-top: 10px;
+      padding: 11px 15px;
+    }
   }
 }
 
@@ -531,6 +586,7 @@ a.social-btn {
     color: @white;
 
     @media @lt-desktop { font-size: 16px; }
+    @media @phone-h { font-size: 14px; }
     @media @phone-v { font-size: 13px; }
   }
 
@@ -544,12 +600,18 @@ a.social-btn {
   padding: 30px 40px 20px;
   border: 3px solid @gray-light;
 
-  @media @lt-desktop { padding: 20px 0 20px; }
+  @media @lt-desktop { padding: 0 0 20px 0; }
 
   .sub-offerings-col {
     font-size: 16px;
 
-    @media @lt-desktop { font-size: 14px; }
+    @media @lt-desktop {
+      font-size: 14px;
+
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+    }
 
     .col-heading {
       padding: 12px 20px;
@@ -557,8 +619,6 @@ a.social-btn {
       display: block;
       width: 100%;
       background: @gray-lighter;
-      border: none;
-      border-left: 3px solid @white;
       font-weight: 500;
       text-align: center;
     }
@@ -694,7 +754,8 @@ a.social-btn {
       background: #460138;
       opacity: 0.9;
 
-      @media @lt-desktop { font-size: 16px; }
+      @media @tablet { font-size: 16px; }
+      @media @phone-h { font-size: 15px; }
       @media @phone-v { font-size: 14px; }
 
       &:hover { opacity: 1; }
@@ -713,6 +774,12 @@ a.social-btn {
 .connect-with-us {
   background: #dfdfdf;
 
+  @media @lt-desktop {
+    .container { padding: 0; }
+    .row { margin: 0; }
+    .col-xs-12 { padding: 0; }
+  }
+
   .connect-with-us-heading {
     line-height: 38px;
     @media @lt-desktop { display: none; }
@@ -720,13 +787,22 @@ a.social-btn {
 
   .social-btns {
     .social-btns-mixin(70px, 32px);
+
+    .social-btns-wrapper {
+      float: right;
+      @media @lt-desktop { float: none; }
+    }
+
     span.call-us {
       float: right;
       margin-left: -5px;
       margin-right: 5px;
       font-size: 14px;
 
-      @media @lt-desktop { font-size: 12px; }
+      @media @lt-desktop {
+        font-size: 12px;
+        float: left;
+      }
     }
 
     .social-btn {
@@ -737,7 +813,22 @@ a.social-btn {
       background: @callus;
       font-size: 40px;
 
-      i { margin-left: -10px; }
+      @media @lt-desktop { width: 53%; }
+
+      i {
+        float: left;
+        margin-left: -10px;
+        margin-top: 15px;
+
+        @media @lt-desktop {
+          margin-top: 10px;
+          font-size: 30px;
+        }
+      }
+    }
+
+    .social-btn.square {
+      @media @lt-desktop { width: 15.6666%; }
     }
   }
 }
@@ -894,7 +985,9 @@ a.social-btn {
     .btn-cta {
       margin-top: 15px;
 
-      @media @lt-desktop { margin-top: 5px; }
+      @media @lt-desktop {
+        margin-top: 5px;
+      }
     }
   }
 }

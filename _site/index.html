@@ -53,82 +53,84 @@
 
 
 
-<nav class="navbar navbar-default extempra-nav">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/"><img alt="Extempra Logo" src="/img/logo.png"></a>
-    </div>
+<div class="navbar-wrapper">
+  <nav id="extempra-nav" class="navbar navbar-default extempra-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img alt="Extempra Logo" src="/img/logo.png"></a>
+      </div>
 
-    <!-- These get collapsed into responsive nav -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="javascript:void(0);" class="dropdown-toggle  " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Offerings<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/workshops/" class="">
-                
-                  Workshops
-                
-              </a>
-            </li>
-            
-            <li>
-              <a href="/personal-coaching/" class="">
-                
-                  Personal Coaching
-                
-              </a>
-            </li>
-            
-            <li>
-              <a href="/extempra-classes/" class="">
-                
-                  Extempra Classes
-                
-              </a>
-            </li>
-            
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="/about" class="dropdown-toggle  " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            About Us<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            
-            <li>
-              <a href="/team/" class="">
-                
-                  Our Team
-                
-              </a>
-            </li>
-            
-            <li>
-              <a href="/testimonials/" class="">
-                
-                  Testimonials
-                
-              </a>
-            </li>
-            
-          </ul>
-        </li>
-        <li><a href="/contact/" class=" ">Contact</a></li>
-      </ul>
+      <!-- These get collapsed into responsive nav -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle  " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Offerings<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              
+              <li>
+                <a href="/workshops/" class="">
+                  
+                    Workshops
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="/personal-coaching/" class="">
+                  
+                    Personal Coaching
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="/extempra-classes/" class="">
+                  
+                    Extempra Classes
+                  
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/about" class="dropdown-toggle  " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              About Us<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              
+              <li>
+                <a href="/team/" class="">
+                  
+                    Our Team
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="/testimonials/" class="">
+                  
+                    Testimonials
+                  
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          <li><a href="/contact/" class=" ">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
 
     <section class="section-hero interactive-training">
   <div class="container hero-wrapper">
@@ -172,7 +174,7 @@
     </div>
 
     <div class="row text-center">
-      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 sub-offerings">
+      <div class="col-xs-10 col-xs-offset-1 sub-offerings">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2 sub-offerings-col">
             <span class="col-heading">Professional Speaking</span>
@@ -180,6 +182,9 @@
               <li>Presenting with Credibility</li>
               <li>Networking</li>
               <li>Accent Training</li>
+              <li class="show-lt-desktop">Presenting with Credibility</li>
+              <li class="show-lt-desktop">Networking</li>
+              <li class="show-lt-desktop">Accent Training</li>
             </ul>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 sub-offerings-col">
@@ -188,10 +193,13 @@
               <li>Impromptu Speaking</li>
               <li>Speech Delivery</li>
               <li>Speech Crafting</li>
+              <li class="show-lt-desktop">Presenting with Credibility</li>
+              <li class="show-lt-desktop">Networking</li>
+              <li class="show-lt-desktop">Accent Training</li>
             </ul>
           </div>
         </div>
-        <div class="row">
+        <div class="row hide-lt-desktop">
           <div class="panel panel-default">
             <div id="panelId" data-parent="#accordion" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-panelId">
               <div class="panel-body">
@@ -213,7 +221,7 @@
             </div>
           </div>
       </div>
-      <a class="panel-button collapsed subofferings-view-all" role="button" data-toggle="collapse" href="#panelId" aria-expanded="false" aria-controls="panelId">
+      <a class="panel-button collapsed subofferings-view-all hide-lt-desktop" role="button" data-toggle="collapse" href="#panelId" aria-expanded="false" aria-controls="panelId">
         View All
       </a>
     </div>
@@ -323,7 +331,7 @@
     <div class="row">
       <h3 class="connect-with-us-heading col-sm-4">Connect with us</h3>
       <div class="social-btns col-xs-12 col-sm-8">
-        <div class="pull-right">
+        <div class="social-btns-wrapper">
           <a href="tel:226-339-1001" title="phone" class="social-btn social-phone">
             <i class="fa fa-mobile fa-fw"></i>
             <span class="call-us">Call us at 226.339.1001</span>
