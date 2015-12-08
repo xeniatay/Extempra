@@ -6,5 +6,41 @@ permalink: /extempra-classes/
 category-order: 3
 sitemap-order: 7
 footer: true
+body-data-attrs: "data-spy='scroll' data-target='#ec-affix'"
 ---
 
+<div class="extempra-classes-page">
+  <section class="container section-content">
+    <div class="row">
+      <div class="hidden-xs hidden-sm col-md-3">
+        {% include extempraclasses_affix.html %}
+      </div>
+      <div class="col-xs-12 col-md-9">
+        {% include extempraclasses_publicspeaking.html %}
+
+        <div class="bg-gray dark extempra-classes-well">
+          <h1>Extempra Classes</h1>
+          <p>
+          Extempra’s classes consist of 5 scheduled workshops and one-on-one sessions to give you <br>the forum you need to gain the conceptual knowledge and practice your skills.
+          </p>
+          <p>
+          All classes are open for enrollment to anyone who is interested. <br>
+          We are also offer happy to offer our classes as packages to organizations.
+          </p>
+          <p>
+          See below for our current offerings.
+          </p>
+          <h3>
+          It Only Takes 5 Sessions!
+          </h3>
+        </div>
+
+        {% include extempraclasses_professionalspeaking.html %}
+        <hr>
+        {% include extempraclasses_accenttraining.html %}
+        <hr>
+        {% include extempraclasses_createyourown.html %}
+      </div>
+    </div>
+  </section>
+</div>

@@ -56,13 +56,6 @@ hr {
   @media @phone { display: block; }
 }
 
-.hide-lt-desktop { @media @lt-desktop { display: none; } }
-.show-lt-desktop {
-  display: none;
-
-  @media @lt-desktop { display: block; }
-}
-
 /*** Type ***/
 h1 {
   text-transform: uppercase;
@@ -1175,8 +1168,74 @@ a.panel-button.collapsed {
       line-height: 1.3em;
 
       @media @lt-desktop {
-        font-size: 14px;
+        font-size: 15px;
       }
     }
+  }
+}
+
+/*** Extempra Classes ***/
+.extempra-classes-page {
+  .extempraclasses-sidebar {
+    font-size: 15px;
+
+    a {
+      padding: 5px 10px;
+      margin: 10px 0;
+      display: block;
+      color: @brand-secondary;
+      font-weight: 500;
+
+      &:hover {
+        background: @gray-lightest;
+        color: lighten(@brand-secondary, 20%);
+      }
+    }
+
+    .active a {
+      color: lighten(@brand-secondary, 15%);
+      border-left: 2px solid @gray-light;
+    }
+  }
+}
+
+.ec-public-speaking {
+  table {
+    table-layout: fixed;
+    // width: 847px;
+  }
+
+  tr {
+    .session-num { width: 80px; }
+    .topic-area { width: 120px; }
+    .time-duration { width: 90px; }
+    .desc {}
+  }
+
+  th, td {
+    vertical-align: middle !important;
+  }
+}
+
+.notify-me {
+  text-align: center;
+  margin: 40px auto 10px;
+}
+
+.scroll-anchor-offset {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.extempra-classes-well {
+  margin: 40px auto;
+  padding: 20px 40px 30px;
+}
+
+.ec-create-your-own {
+  .btn-contact {
+    display: block;
+    margin: 40px auto;
+    text-align: center;
   }
 }
